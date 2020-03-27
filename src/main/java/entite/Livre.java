@@ -3,11 +3,16 @@
  */
 package entite;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 /**
@@ -25,6 +30,10 @@ public class Livre {
 	private String titre;
 	@Column(name = "auteur")
 	private String auteur;
+	
+	@ManyToMany(mappedBy = "livre")
+	private Set<Emprunt> emprunt;
+
 	
 	public Livre() {
 	}
