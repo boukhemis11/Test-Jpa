@@ -49,7 +49,7 @@ public class Testjpa {
 		
 
 		
-		// select en fonction d'un id de clien
+		// select en fonction d'un id de client
 
 		TypedQuery<Emprunt> query3 = entityManager.createQuery("SELECT e FROM Emprunt e JOIN e.client c WHERE c.id =:id", Emprunt.class)
 				.setParameter("id", 1);;
