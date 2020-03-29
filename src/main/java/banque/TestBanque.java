@@ -62,7 +62,7 @@ public class TestBanque {
 
 		t1.commit();
 
-		TypedQuery<ClientBanque> query1 = entityManager.createQuery("Select c FROM Client c", Client.class);
+		TypedQuery<ClientBanque> query1 = entityManager.createQuery("Select c FROM Client c", ClientBanque.class);
 
 		for (ClientBanque client : query1.getResultList()) {
 				System.out.println(client);
